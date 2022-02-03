@@ -1,4 +1,5 @@
 # heeeri.github.io
 PS4 ID FAKE GENERATOR FOR ANDROID REMOTE PLAY
 
-support us https://saweria.co/heeeri
+go to pages: https://heeeri.github.io
+donate: https://saweria.co/heeeri
