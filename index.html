@@ -1,0 +1,92 @@
+<html>
+<head>
+<body bgcolor="#000000">
+	<title>RANDOM FAKE NUMBER PSN-ID GENERATOR</title>
+	<style type="text/css">
+		.container{
+			width:auto;
+			margin:auto;
+			border: 1px dashed #555;
+			padding: 10px;
+			border-radius: 50px;
+		}
+		#generate{
+			background: cyan;
+			width: 155px;
+			padding: 0px;
+			border-radius: 5px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+	<center><font color="#00ff00"><h1 style="font-size: 12px; font-family: arial;" id="jam"></h1></center>
+	<center><h2><font color="#00ff00">RANDOM FAKE NUMBER PSN-ID</font></h2><center>
+	<p><font color="#00ff00">FOR PS4 HEN REMOTE PLAY</font></p>
+	<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <div class="container">
+        <!-- The text field -->
+		<textarea id="generate"></textarea>
+        <!-- The button used to copy the text -->
+        <br/>
+        <button id="copyBtn">Copy ID</button>
+        <!--using sweetalert via CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script>
+            const copyBtn = document.getElementById('copyBtn')
+            const copyText = document.getElementById('generate')
+            
+            copyBtn.onclick = () => {
+                copyText.select();    // Selects the text inside the input
+                document.execCommand('copy');    // Simply copies the selected text to clipboard 
+                 Swal.fire({         //displays a pop up with sweetalert
+                    icon: 'success',
+                    title: 'PSN CODE HAS BEEN COPY',
+                    showConfirmButton: false,
+                    timer: 1000
+                });
+            }
+        </script>
+	<p><font color="#00ff00">CLICK RELOAD TO GET ANOTHER RANDOM ID</font></p>
+	 <head>
+<body>
+<input type="submit"  value="Reload" onClick="document.location.reload(true)">
+<script>
+function reloadpage()
+{
+location.reload()
+}
+</script>
+</body>
+	</div>
+	<script>
+		document.getElementById("generate").innerHTML =	Math.floor(Math.random() * 6001447510126484090);
+</script>
+<script type="text/javascript">
+    window.onload = function() { jam(); }
+   
+    function jam() {
+     var e = document.getElementById('jam'),
+     d = new Date(), h, m, s;
+     h = d.getHours();
+     m = set(d.getMinutes());
+     s = set(d.getSeconds());
+   
+     e.innerHTML = h +':'+ m +':'+ s;
+   
+     setTimeout('jam()', 1000);
+    }
+   
+    function set(e) {
+     e = e < 10 ? '0'+ e : e;
+     return e;
+    }
+   </script>
+   <p><font color="white">v1.0 made with 💚 by <a href="http://www.github.com/heeeri">heeeri</a></p></font></p>
+</body>
+</html>
