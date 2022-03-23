@@ -1,0 +1,16 @@
+{
+    "name": "Chevalier Lab",
+    "short_name": "Chevalier Lab",
+    "description": "We code, we share, we create.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#F8A400",
+    "icons": [
+        {
+            "src": "/assets/images/logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}
