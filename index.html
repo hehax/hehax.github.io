@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <body bgcolor="#000000">
+<link rel=”manifest” href=”/manifest.json”>
+<body bgcolor="#000000">
 	<title>RANDOM FAKE NUMBER PSN-ID GENERATOR</title>
 	<style type="text/css">
 		.container{
@@ -50,6 +50,20 @@ a:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover{
 <body>
 	<div class="container">
 	<center><font color="#00ff00"><h1 style="font-size: 12px; font-family: arial;" id="jam"></h1></center>
+	<center><p><span id="tanggalwaktu"></span></p>
+	<script>
+	var tw = new Date();
+	if (tw.getTimezoneOffset() == 0) (a=tw.getTime() + ( 7 *60*60*1000))
+	else (a=tw.getTime());
+	tw.setTime(a);
+	var tahun= tw.getFullYear ();
+	var hari= tw.getDay ();
+	var bulan= tw.getMonth ();
+	var tanggal= tw.getDate ();
+	var hariarray=new Array("Sunday,","Monday,","Tuesday,","Wednesday,","Thrusday,","Friday,","Saturday,");
+	var bulanarray=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+	document.getElementById("tanggalwaktu").innerHTML = hariarray[hari]+" "+tanggal+" "+bulanarray[bulan]+" "+tahun;
+	</script></center>
 	<center><h2><font color="#00ff00">RANDOM FAKE NUMBER PSN-ID</font></h2><center>
 	<p><font color="#00ff00">FOR PS4 HEN REMOTE PLAY</font></p>
 	<meta charset="UTF-8">
@@ -117,15 +131,21 @@ location.reload()
    </script>
    <p><font color="white"> <a href="http://www.github.com/heeeri">v1.0 made with 💚 by heeeri</a></p></font></p>
    <p><font color="white"> <a href="http://www.saweria.co/heeeri">Click Me for Donate</a></p></font></p>
-
-
-    <script src="assets/js/jquery-3.5.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/service-worker-controller.js"></script>
-    <script>
-        // menjalankan registrasi service worker yang sudah didefine di service-worker-controller.js
-        new SW();
-    </script>
+   <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function() {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then(function() {
+            console.log("Registrastion succeed.");
+          })
+          .catch(function() {
+            console.log("Registrastion failed.");
+          });
+      });
+    } else {
+      console.log("ServiceWorker is unsupported.");
+    }
+</script>
 </body>
 </html>
