@@ -1,6 +1,6 @@
 PS ID FAKE GENERATOR FOR PLAYSTATION (HEN) APPS REMOTE PLAY (<a href="https://play.google.com/store/apps/details?id=psplay.grill.com&hl=en&gl=US">PSPlay</a> & <a href="https://sr.ht/~thestr4ng3r/chiaki/">Chiaki</a>)<br>
 
-=======================================================================================<br> 
+<hr />
 
 <strong><i>V 1.1 </strong></i><br>
 - Fix some Alignment Issues.<br>
@@ -10,7 +10,7 @@ PS ID FAKE GENERATOR FOR PLAYSTATION (HEN) APPS REMOTE PLAY (<a href="https://pl
 <strong><i>V 1.0 </strong></i><br>
 - Fix some Alignment Issues.<br>
 
-=======================================================================================<br> 
+<hr />
 
 <strong><i>How Can I Use It?</strong></i><br> 
 1. Open https://heeeri.github.io via browser (Using data in first time).<br> 
@@ -20,7 +20,7 @@ PS ID FAKE GENERATOR FOR PLAYSTATION (HEN) APPS REMOTE PLAY (<a href="https://pl
 
 *then if you want to use it again, just type https://heeeri.github.io/ without needing to activate data as long as you haven't cleared the cache.
 
-=======================================================================================<br> 
+<hr />
 
 <p align="center"><a href="https://saweria.co/heeeri">
       <img src="https://d3n8a8pro7vhmx.cloudfront.net/naacpmpls/pages/1096/attachments/original/1590865022/donate-dark-blue-gift-icon.png" alt="Pengertian HTML" style="width:200px"></p>
