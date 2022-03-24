@@ -15,7 +15,7 @@ PS ID FAKE GENERATOR FOR PLAYSTATION (HEN) APPS REMOTE PLAY (<a href="https://pl
 <strong><i>How Can I Use It?</strong></i><br> 
 1. Open https://hehax.github.io via browser (Using data in first time).<br> 
 2. Select "Copy ID" to copy PSN ID.<br> 
-3. Paste to Apps.<br> 
+3. Paste PSN ID to Apps.<br> 
 4. If you want use another PSN ID, can select "Reload" to get another PSN ID.<br> 
 
 *then if you want to use it again, just type https://hehax.github.io/ without needing to activate data as long as you haven't cleared the cache.
