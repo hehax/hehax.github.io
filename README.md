@@ -20,6 +20,8 @@ PS ID FAKE GENERATOR FOR PLAYSTATION (HEN) APPS REMOTE PLAY (<a href="https://pl
 
 *then if you want to use it again, just type https://hehax.github.io/ without needing to activate data as long as you haven't cleared the cache.
 
+<p align="center">-ʜᴇʜᴀx-</p>
+
 <hr />
 
 <p align="center"><a href="https://saweria.co/heeeri">
