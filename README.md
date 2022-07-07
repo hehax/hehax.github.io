@@ -24,5 +24,5 @@ PS ID FAKE GENERATOR FOR PLAYSTATION (HEN) APPS REMOTE PLAY (<a href="https://pl
 
 <hr />
 
-<p align="center"><a href="https://saweria.co/heeeri">
+<p align="center"><a href="https://saweria.co/hehax">
       <img src="https://d3n8a8pro7vhmx.cloudfront.net/naacpmpls/pages/1096/attachments/original/1590865022/donate-dark-blue-gift-icon.png" alt="Donation" style="width:200px"></p>
