@@ -1,57 +1,132 @@
-<div style="border: 15px; border-style: dotted; border-color: #ABABAA;">
-  <html>
+<html>
 <head>
-<body style="background-color: #272A31;">
-<center>
-    <title>Halaman Donasi</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <style type="text/css">
-    	strong{
-    		cursor: pointer;
-    	}
-    	strong:hover{
-    		color: blue
-    	}
-    </style>
+<link rel=”manifest” href=”/manifest.json”>
+<body bgcolor="#000000">
+	<title>HALAMAN DONASI</title>
+	<style type="text/css">
+		.container{
+			width:auto;
+			margin:auto;
+			color: #00ff00;
+			border: 2px dashed #555;
+			padding: 10px;
+			border-radius: 50px;
+		}
+		#generate{
+			background: #000000;
+			font-family: Tahoma;
+			font-size: 13px;
+			border: #00ff00 3px solid;
+			color: #00ff00;
+			width: 170px;
+			padding-right: 2px;
+			padding-left: 2px;
+			padding-top: 2px;
+			padding-bottom: 2px;
+			border-radius: 10px;
+			font-weight: bold;
+			margin-top: 8px
+		}
+	</style>
+<style>
+a, button,input[type=submit],input[type=reset] {
+    font-family: sans-serif;
+    font-size: 13px;
+    background: #000000;
+    color: #00ff00;
+    border: #00ff00 3px solid;
+    border-radius: 10px;
+    padding: 6px 14px;
+    margin-top: 8px;
+}
+a {
+    text-decoration: none;
+}
+a:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover{
+    opacity:0.9;
+}
+</style>
 </head>
-<body><br/><br/><br/>
-<font color="#ABABAA" size= font face="Century Gothic">SELAMAT DATANG</font><br/><br/>
-<font color="#ABABAA" size= font face="Arial">Donasi Via E-Wallet</font><br/>
-<img src="https://raw.githubusercontent.com/hehax/hehax.github.io/main/donate/donate2-min.png" alt="e-wallet" width="130">
-<br/><br/>
-<font color="#ABABAA" size= font face="Arial">Klik Untuk Salin Nomor</font><br/>
-    <div class="container">
-        <div class="col-md-12">
-                <font color="#ABABAA"><label></label> &nbsp; <span onclick="copyTeks()" id="dataCopy"> <strong>0895352516500</strong></span></font>
-    <script type="text/javascript">
-        var span = document.querySelector("span");
-        function copyTeks(){
-            document.execCommand("copy");
-            alert("Nomor" + span.textContent + " berhasil disalin, Terimakasih telah berdonasi :)" )
-        }
-        span.addEventListener("copy", function(event) {
-          event.preventDefault();
-          if (event.clipboardData) {
-            event.clipboardData.setData("text/plain", span.textContent);
-            console.log(event.clipboardData.getData("text"))
-          }
-        });
-    </script><br/><br/><br/>
-<font color="#ABABAA" size= font face="Arial">Donasi Via Saweria</font><br/>
-<font color="#ABABAA" size= font face="Arial">Klik QR untuk menuju Saweria</font><br/>
-<a href="https://saweria.co/hehax" title="Menuju Saweria">
-   <img src="https://on.h4x.workers.dev/0:/z%20logo%20saweria.png" alt="Klik Ini Untuk Donasi" width="100" border=0><br/><br/><br/>
-</a></body>
-<font color="#ABABAA" size= font face="Arial">Daftar Yang Sudah Berdonasi</font><br/>
-<font color="#ABABAA"> 1. Bagoes </font><br/>
-<font color="#ABABAA">2. jeffri avernus </font><br/>
-<font color="#ABABAA">3. Erik Suparman</font><br/>
-<font color="#ABABAA">4. bolank91</font><br/>
-</a></body>
-<a href="https://hax.biz.id" title="Home">
-   <img src="https://on.h4x.workers.dev/0:/Nintendo_Switch-Logo.wine.svg" alt="Klik Ini Untuk Kembali" width="150" border=0><br/><br/><br/>
+<body>
+	<div class="container">
+	<center><font color="#00ff00"><h1 style="font-size: 12px; font-family: arial;" id="jam"></h1></center>
+	<center><p><span id="tanggalwaktu"></span></p>
+	<script>
+	var tw = new Date();
+	if (tw.getTimezoneOffset() == 0) (a=tw.getTime() + ( 7 *60*60*1000))
+	else (a=tw.getTime());
+	tw.setTime(a);
+	var tahun= tw.getFullYear ();
+	var hari= tw.getDay ();
+	var bulan= tw.getMonth ();
+	var tanggal= tw.getDate ();
+	var hariarray=new Array("Minggu,","Senin,","Selasa,","Rabu,","Kamis,","Jumat,","Sabtu,");
+	var bulanarray=new Array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember");
+	document.getElementById("tanggalwaktu").innerHTML = hariarray[hari]+" "+tanggal+" "+bulanarray[bulan]+" "+tahun;
+	</script></center>
+	<center><h2><font color="#00ff00"></font></h2><center>
+	<p><font color="#00ff00">OVO,DANA,GOPAY</font></p>
+	<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <input type="text" value="089535216500" id="myInput">
+<button onclick="myFunction()">Salin Nomor</button>
+
+<script>
+function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+  
+  // Alert the copied text
+  alert("Nomor " + copyText.value + " sudah disalin, terimakasih telah berdonasi." );
+}
+</script>
+    <br/> <br/><br/><p><font color="white"> <a href="http://www.saweria.co/hehax">Donasi Via Saweria</a></p></font></p><br/>
+   <p><font color="white"> <a href="http://hax.biz.id">Home</a></p></font></p>
+   Daftar yang sudah ikut berdonasi:
+   <marquee behavior="scroll" direction="left" scrollamount="10">1. Bagoes 2. jeffri avernus 3. Erik Suparman 4. bolank91</marquee>
+<script type="text/javascript">
+    window.onload = function() { jam(); }
+   
+    function jam() {
+     var e = document.getElementById('jam'),
+     d = new Date(), h, m, s;
+     h = d.getHours();
+     m = set(d.getMinutes());
+     s = set(d.getSeconds());
+   
+     e.innerHTML = h +':'+ m +':'+ s;
+   
+     setTimeout('jam()', 1000);
+    }
+   
+    function set(e) {
+     e = e < 10 ? '0'+ e : e;
+     return e;
+    }
+   
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function() {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then(function() {
+            console.log("Registrastion succeed.");
+          })
+          .catch(function() {
+            console.log("Registrastion failed.");
+          });
+      });
+    } else {
+      console.log("ServiceWorker is unsupported.");
+    }
+</script>
 </body>
-</center>
 </html>
-</
