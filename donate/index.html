@@ -60,42 +60,52 @@ a:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover{
 	var hari= tw.getDay ();
 	var bulan= tw.getMonth ();
 	var tanggal= tw.getDate ();
-	var hariarray=new Array("Minggu,","Senin,","Selasa,","Rabu,","Kamis,","Jumat,","Sabtu,");
-	var bulanarray=new Array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember");
+	var hariarray=new Array("Sunday,","Monday,","Tuesday,","Wednesday,","Thrusday,","Friday,","Saturday,");
+	var bulanarray=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
 	document.getElementById("tanggalwaktu").innerHTML = hariarray[hari]+" "+tanggal+" "+bulanarray[bulan]+" "+tahun;
 	</script></center>
 	<center><h2><font color="#00ff00"></font></h2><center>
-    <img src="https://raw.githubusercontent.com/hehax/hehax.github.io/main/donate/donate2-min.png" alt="e-wallet" width="130"><br/>
-	GOPAY,OVO,DANA<br/>
+
 	<meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <input type="text" value="0895352516500" id="myInput">
-<button onclick="myFunction()">Salin Nomor</button>
-
-<script>
-function myFunction() {
-  // Get the text field
-  var copyText = document.getElementById("myInput");
-
-  // Select the text field
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); // For mobile devices
-
-  // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value);
-  
-  // Alert the copied text
-  alert("Nomor " + copyText.value + " sudah disalin, terimakasih telah berdonasi." );
-}
-</script>
-    <br/><br/><br/><br/>
-    <img src="https://raw.githubusercontent.com/hehax/hehax.github.io/main/donate/sawer%20(1).png" alt="e-wallet" width="130">
+    <body>
+    <div class="container">
+<img src="https://raw.githubusercontent.com/hehax/hehax.github.io/main/donate/donate2-min.png" alt="e-wallet" width="130"><br/>
+	GOPAY,OVO,DANA<br/>
+		<textarea id="generate"></textarea>
+        <!-- The button used to copy the text -->
+        <br/>
+        <button id="copyBtn">Salin Nomor</button>
+        <!--using sweetalert via CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script>
+            const copyBtn = document.getElementById('copyBtn')
+            const copyText = document.getElementById('generate')
+            
+            copyBtn.onclick = () => {
+                copyText.select();    // Selects the text inside the input
+                document.execCommand('copy');    // Simply copies the selected text to clipboard 
+                 Swal.fire({         //displays a pop up with sweetalert
+                    icon: 'success',
+                    title: 'Nomor telah berhasil disalin, terimakasih banyak atas donasinya',
+                    showConfirmButton: false,
+                    timer: 2500
+                });
+            }
+        </script>
+	<p><font color="#00ff00"> </font></p>
+	 <head>
+<body>
+</body> <img src="https://raw.githubusercontent.com/hehax/hehax.github.io/main/donate/sawer%20(1).png" alt="e-wallet" width="130">
     <br/><p><font color="white"> <a href="http://www.saweria.co/hehax">Donasi Via Saweria</a></p></font></p><br/>
-   <p><font color="white"> <a href="http://hax.biz.id">Home</a></p></font></p>
-   Daftar yang sudah ikut berdonasi:
-   <marquee behavior="scroll" direction="left" scrollamount="10">1. Bagoes 2. jeffri avernus 3. Erik Suparman 4. bolank91 5. Sulviawan</marquee>
+	</div>
+	<script>
+var num = 895352516500;
+var paddedNum = num.toString().padStart(13, '0');
+document.getElementById("generate").innerHTML = paddedNum;
+</script>
 <script type="text/javascript">
     window.onload = function() { jam(); }
    
@@ -115,7 +125,11 @@ function myFunction() {
      e = e < 10 ? '0'+ e : e;
      return e;
     }
-   
+   </script>
+   <p><font color="white"> <a href="http://hax.biz.id">Home</a></p></font></p>
+   Daftar yang sudah ikut berdonasi:
+   <marquee behavior="scroll" direction="left" scrollamount="10">1. Bagoes 2. jeffri avernus 3. Erik Suparman 4. bolank91 5. Sulviawan</marquee>
+<script type="text/javascript">
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", function() {
         navigator.serviceWorker
